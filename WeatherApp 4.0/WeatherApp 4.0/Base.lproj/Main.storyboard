@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="ZLa-el-07G">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="ZLa-el-07G">
                                 <rect key="frame" x="159" y="100" width="57" height="126"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYg-kV-to1">
@@ -26,7 +26,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nx4-Ae-S8A">
-                                        <rect key="frame" x="0.0" y="78" width="57" height="48"/>
+                                        <rect key="frame" x="4" y="78" width="49" height="48"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -41,6 +41,10 @@
                             <constraint firstItem="ZLa-el-07G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rjp-VK-1z7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityTextLabel" destination="SYg-kV-to1" id="xTm-oL-xyR"/>
+                        <outlet property="temperatureLabel" destination="Nx4-Ae-S8A" id="sGb-KO-p34"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
