@@ -22,16 +22,36 @@ struct WeatherJson: Decodable {
         let temperature: Double
         let windSpeed: Double
         let pressure: Int
+        let condition: Condition
+        
+    
         
         enum CodingKeys: String, CodingKey {
             case temperature = "temp_c"
             case windSpeed = "wind_kph"
             case pressure = "pressure_mb"
+            case condition = "condition"
         }
+        
+    }
+}
+struct Condition: Decodable {
+        let text: String
+        let icon: String
+    
+    func iconUrl () -> URL {
+        let iconSource = "https:" + icon
+        guard let iconUrl = URL(string: iconSource) else {
+            fatalError("Invalid icon URL string: \(iconSource)")
+        }
+        return iconUrl
     }
 }
 
 struct WeatherViewModel {
     let cityName: String
     let temperature: String
+    let windSpeed: String
+    let pressure: String
+    let condition: Condition
 }

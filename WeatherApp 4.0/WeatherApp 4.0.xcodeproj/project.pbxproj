@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A69B944B2E2104E4002D1655 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A69B944A2E2104E4002D1655 /* Alamofire */; };
+		A69B94502E2163D3002D1655 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A69B944F2E2163D3002D1655 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69B94502E2163D3002D1655 /* Kingfisher in Frameworks */,
 				A69B944B2E2104E4002D1655 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +86,7 @@
 			name = "WeatherApp 4.0";
 			packageProductDependencies = (
 				A69B944A2E2104E4002D1655 /* Alamofire */,
+				A69B944F2E2163D3002D1655 /* Kingfisher */,
 			);
 			productName = "WeatherApp 4.0";
 			productReference = A69B942D2E20F9EC002D1655 /* WeatherApp 4.0.app */;
@@ -115,6 +118,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				A69B94492E2104E4002D1655 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A69B944E2E2163D3002D1655 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A69B942E2E20F9EC002D1655 /* Products */;
@@ -360,6 +364,14 @@
 				minimumVersion = 5.10.2;
 			};
 		};
+		A69B944E2E2163D3002D1655 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -367,6 +379,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A69B94492E2104E4002D1655 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		A69B944F2E2163D3002D1655 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A69B944E2E2163D3002D1655 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

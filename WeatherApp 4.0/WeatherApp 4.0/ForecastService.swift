@@ -27,7 +27,13 @@ class ForecastService {
                 .responseDecodable(of: WeatherJson.self) { (responseData) in
                     switch responseData.result {
                     case .success(let weatherJson):
-                        let viewModel = WeatherViewModel(cityName: weatherJson.location.name, temperature: String(weatherJson.current.temperature))
+                        let viewModel = WeatherViewModel(
+                            cityName: weatherJson.location.name,
+                            temperature: String(weatherJson.current.temperature),
+                            windSpeed: String(weatherJson.current.windSpeed),
+                            pressure: String(weatherJson.current.pressure),
+                            condition: weatherJson.current.condition
+                        )
                         completion(viewModel)
                     case .failure(let error):
                         print("Error: \(error)")
